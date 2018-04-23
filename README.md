@@ -1,6 +1,6 @@
 # flutter 示例工程
 
-## 美剧app 示例工程
+## 美剧APP(meiju_app)
 <!-- ![首页](/assets/home.png) -->
 <table>
   <tr>
