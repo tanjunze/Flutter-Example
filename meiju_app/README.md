@@ -1,8 +1,15 @@
 # meiju_app
 
-A new Flutter project.
+美剧APP 示例工程
 
-## Getting Started
+## TODO
 
-For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
+* 添加 拍照选着头像功能
+
+* 添加 关于我们 webview样式
+
+* 添加 设置功能
+
+* 切换主题功能
+
+* ......(待添加)
