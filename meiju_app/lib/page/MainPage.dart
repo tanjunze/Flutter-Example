@@ -19,7 +19,6 @@ class _MainPage extends State<MainPage> {
 
   @override
   Widget build(BuildContext context) {
-    print("_MainPage");
     return new Scaffold(
       backgroundColor: pageColor,
       body: new Stack(
