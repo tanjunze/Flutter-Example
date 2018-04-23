@@ -1,0 +1,307 @@
+{
+    "items":[
+        {
+            "title": "轮番图",
+            "moives": [
+                {
+                    "img": "http://img.kukan5.com:808/pic/uploadimg/2018-2/5a81b6eeb9348.jpg",
+                    "name": "此时此刻第一季"
+                },
+                {
+                    "img": "http://img.kukan5.com:808/pic/uploadimg/2018-1/d813964dac7f640159c475447de2b1c8.jpg",
+                    "name": "高中卧底第一季"
+                },
+                {
+                    "img": "http://img.kukan5.com:808/pic/uploadimg/2018-1/p2506610722.jpg",
+                    "name": "住院医师第一季"
+                },
+                {
+                    "img": "http://img.kukan5.com:808/pic/uploadimg/2017-12/5a3212e3557f8.jpg",
+                    "name": "相对宇宙第一季"
+                },
+                {
+                    "img": "http://img.kukan5.com:808/pic/uploadimg/2017-9/p2496064819.jpg",
+                    "name": "仁医第一季"
+                }
+            ]
+        },
+        {
+            "title": "最近连载",
+            "moives": [
+                {
+                    "img": "http://img.kukan5.com:808/pic/uploadimg/2018-3/p2516158314.jpg",
+                    "name": "亚莉克莎与凯蒂第一季",
+                    "num": "第9集",
+                    "type": "都市/情感",
+                    "state": "未更新"
+                },
+                {
+                    "name": "我是僵尸第四季",
+                    "num": "第5集",
+                    "state": "未更新"
+                },
+                {
+                    "name": "明日传奇第三季",
+                    "num": "第16集",
+                    "state": "未更新"
+                },
+                {
+                    "name": "莫尔希德第一季",
+                    "num": "第2集",
+                    "state": "未更新"
+                },
+                {
+                    "name": "仁医第一季",
+                    "num": "第18集",
+                    "state": "未更新"
+                },
+                {
+                    "name": "天蝎第四季",
+                    "num": "第20集",
+                    "state": "未更新"
+                },
+                {
+                    "name": "极地恶灵第一季",
+                    "num": "第2集",
+                    "state": "未更新"
+                },
+                {
+                    "name": "康斯坦丁：恶魔之城第一季",
+                    "num": "第1集",
+                    "state": "未更新"
+                },
+                {
+                    "name": "退休警察烦事多第二季",
+                    "num": "第20集",
+                    "state": "未更新"
+                },
+                {
+                    "name": "住院医师第一季",
+                    "num": "第9集",
+                    "state": "未更新"
+                },
+                {
+                    "name": "沉默的天使第一季",
+                    "num": "第10集",
+                    "state": "未更新"
+                },
+                {
+                    "name": "信任第一季",
+                    "num": "第1集",
+                    "state": "未更新"
+                }
+            ]
+        },
+        {
+            "title": "2018新剧推荐",
+            "moives": [
+                {
+                    "img": "http://img.kukan5.com:808/pic/uploadimg/2018-3/p2516158314.jpg",
+                    "name": " 亚莉克莎与凯蒂.. ",
+                    "num": "第9集",
+                    "classify": "都市/情感",
+                    "type": "喜剧"
+                },
+                {
+                    "img": "http://img.kukan5.com:808/pic/uploadimg/2018-3/p2517231940.jpg",
+                    "name": " 极地恶灵第一季 ",
+                    "num": "第2集",
+                    "classify": "灵异/惊秫",
+                    "type": "惊悚,剧情"
+                },
+                {
+                    "img": "http://img.kukan5.com:808/pic/uploadimg/2018-3/p2517407741.jpg",
+                    "name": " 康斯坦丁：恶魔.. ",
+                    "num": "第1集",
+                    "classify": "动漫/卡通",
+                    "type": "惊悚,奇幻,动画"
+                },
+                {
+                    "img": "http://img.kukan5.com:808/pic/uploadimg/2018-1/p2506610722.jpg",
+                    "name": " 住院医师第一季 ",
+                    "num": "第9集",
+                    "classify": "都市/情感",
+                    "type": "医务,剧情"
+                },
+                {
+                    "img": "http://img.kukan5.com:808/pic/uploadimg/2018-1/5a672335d5228.jpg",
+                    "name": " 沉默的天使第一季 ",
+                    "num": "第10集",
+                    "classify": "犯罪/历史",
+                    "type": "罪案,剧情"
+                },
+                {
+                    "img": "http://img.kukan5.com:808/pic/uploadimg/2018-2/5a81b6eeb9348.jpg",
+                    "name": " 此时此刻第一季 ",
+                    "num": "第7集",
+                    "classify": "都市/情感",
+                    "type": "喜剧,剧情"
+                },
+                {
+                    "img": "http://img.kukan5.com:808/pic/uploadimg/2018-3/p2513158209.jpg",
+                    "name": " 圣经狂想曲第一季 ",
+                    "num": "第5集",
+                    "classify": "都市/情感",
+                    "type": "喜剧"
+                },
+                {
+                    "img": "http://img.kukan5.com:808/pic/uploadimg/2018-3/p2513169197.jpg",
+                    "name": " 生命新旅程第一季 ",
+                    "num": "第3集",
+                    "classify": "都市/情感",
+                    "type": "喜剧"
+                }
+            ]
+        },
+        {
+            "title": "魔幻/科幻",
+            "moives": [
+                {
+                    "img": "http://img.kukan5.com:808/pic/uploadimg/2017-12/5a226450ccbc8.jpg",
+                    "name": "神盾局特工第五季",
+                    "num": "第14集"
+                },
+                {
+                    "img": "http://img.kukan5.com:808/pic/uploadimg/2017-9/p2493581990.jpg",
+                    "name": "天赋异禀第一季",
+                    "num": "本季终"
+                },
+                {
+                    "img": "http://img.kukan5.com:808/pic/uploadimg/2017-12/5a3212e3557f8.jpg",
+                    "name": "相对宇宙第一季",
+                    "num": "第9集"
+                },
+                {
+                    "img": "http://img.kukan5.com:808/pic/uploadimg/2017-8/p2461517665.jpg",
+                    "name": "闪电侠第四季",
+                    "num": "第16集"
+                }
+            ]
+        },
+        {
+            "title": "都市/情感",
+            "moives": [
+                {
+                    "img": "http://img.kukan5.com:808/pic/uploadimg/2017-9/p2499638425.jpg",
+                    "name": "生活大爆炸第十一季",
+                    "num": "第17集"
+                },
+                {
+                    "img": "http://img.kukan5.com:808/pic/uploadimg/2018-2/p2513108673.jpg",
+                    "name": "傲骨之战第二季",
+                    "num": "第4集"
+                },
+                {
+                    "img": "http://img.kukan5.com:808/pic/uploadimg/2018-3/p2511621940.jpg",
+                    "name": "亿万第三季",
+                    "num": "第1集"
+                },
+                {
+                    "img": "http://img.kukan5.com:808/pic/uploadimg/2018-2/5a81b6eeb9348.jpg",
+                    "name": "此时此刻第一季",
+                    "num": "第7集"
+                }
+            ]
+        },
+        {
+            "title": "选秀/综艺",
+            "moives": [
+                {
+                    "img": "http://img.kukan5.com:808/pic/uploadimg/2018-1/d813964dac7f640159c475447de2b1c8.jpg",
+                    "name": "高中卧底第一季",
+                    "num": "第9集"
+                },
+                {
+                    "img": "http://img.kukan5.com:808/pic/uploadimg/2018-3/p2508061341.jpg",
+                    "name": "幸存者：幽灵岛第三十六季",
+                    "num": "第5集"
+                },
+                {
+                    "img": "http://img.kukan5.com:808/pic/uploadimg/2018-1/20181111816252007.jpg",
+                    "name": "全美超模大赛第二十四季",
+                    "num": "第8集"
+                },
+                {
+                    "img": "http://img.kukan5.com:808/pic/uploadimg/2018-3/p2508143753.jpg",
+                    "name": "奇妙酒店：大堂之外的生活第一季",
+                    "num": "第5集"
+                }
+            ]
+        },
+        {
+            "title": "灵异/惊秫",
+            "moives": [
+                {
+                    "img": "http://img.kukan5.com:808/pic/uploadimg/2017-10/p2502470035.jpg",
+                    "name": "行尸走肉第八季",
+                    "num": "第13集"
+                },
+                {
+                    "img": "http://img.kukan5.com:808/pic/uploadimg/2018-3/p2517231940.jpg",
+                    "name": "极地恶灵第一季",
+                    "num": "第2集"
+                },
+                {
+                    "img": "http://img.kukan5.com:808/pic/uploadimg/2017-9/p2493379417.jpg",
+                    "name": "路西法第三季",
+                    "num": "第19集"
+                },
+                {
+                    "img": "http://img.kukan5.com:808/pic/uploadimg/2018-2/20182262245598995.jpg",
+                    "name": "鬼玩人第三季",
+                    "num": "第5集"
+                }
+            ]
+        },
+        {
+            "title": "犯罪/历史",
+            "moives": [
+                {
+                    "img": "http://img.kukan5.com:808/pic/uploadimg/2018-2/5a813e9aeffd8.jpg",
+                    "name": "国土安全第七季",
+                    "num": "第7集"
+                },
+                {
+                    "img": "http://img.kukan5.com:808/pic/uploadimg/2018-3/p2516158156.jpg",
+                    "name": "黑金高墙第一季",
+                    "num": "第8集"
+                },
+                {
+                    "img": "http://img.kukan5.com:808/pic/uploadimg/2018-3/5f75c00130898ac1.jpg",
+                    "name": "特洛伊：陷落之城第一季",
+                    "num": "第6集"
+                },
+                {
+                    "img": "http://img.kukan5.com:808/pic/uploadimg/2018-3/p2513410627.jpg",
+                    "name": "神秘法医第一季",
+                    "num": "第3集"
+                }
+            ]
+        },
+        {
+            "title": "动漫/卡通",
+            "moives": [
+                {
+                    "img": "http://img.kukan5.com:808/pic/uploadimg/2018-3/p2517407741.jpg",
+                    "name": "康斯坦丁：恶魔之城第一季",
+                    "num": "第1集"
+                },
+                {
+                    "img": "http://img.kukan5.com:808/pic/uploadimg/2018-3/p2370006472.jpg",
+                    "name": "银河守护者第三季",
+                    "num": "第3集"
+                },
+                {
+                    "img": "http://img.kukan5.com:808/pic/uploadimg/2017-4/p2453814101.jpg",
+                    "name": "瑞克与莫蒂第三季",
+                    "num": "第10集"
+                },
+                {
+                    "img": "http://img.kukan5.com:808/pic/uploadimg/2017-8/p2479580633.jpg",
+                    "name": "宇宙小子第五季",
+                    "num": "第6集"
+                }
+            ]
+        }
+    ]
+}

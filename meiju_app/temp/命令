@@ -1,0 +1,30 @@
+/********** flutter ************/
+
+flutter 运行
+
+flutter run 
+
+指定目标运行
+
+flutter run -d  tragetId
+
+/********** json_serializable ************/
+
+一次性代码生成
+
+flutter packages pub run build_runner build
+
+不断生成代码
+
+flutter packages pub run build_runner watch
+
+
+// flutter  dart 环境变量
+export PATH=/Users/tanjz/SoftDevelop/Flutter/flutter/bin/cache/dart-sdk/bin:$PATH
+
+
+dart 测试命令
+
+pub run test test/io_server_test.dart
+
+
