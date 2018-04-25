@@ -15,7 +15,7 @@ class PickerPhotoDialog extends StatelessWidget {
   PickerImageLisenter pickerLisenter;
   @override
   Widget build(BuildContext context) {
-    pickerHelper = new ImagePickerHelper();
+    pickerHelper = new ImagePickerHelper(maxHeight: 160.0,maxWidth: 160.0);
     return new SafeArea(
       child: new Padding(
         padding: const EdgeInsets.all(10.0),

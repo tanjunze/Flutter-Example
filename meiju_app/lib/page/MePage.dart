@@ -15,6 +15,7 @@ class MePage extends StatefulWidget {
 
 class _MePageState extends State<MePage> {
   Future<File> imageFile;
+  File file;
   Widget build(BuildContext context) {
     return new Scaffold(
         appBar: new AppBar(
@@ -113,13 +114,22 @@ class _MePageState extends State<MePage> {
                           (BuildContext context, AsyncSnapshot<File> snapshot) {
                         if (snapshot.connectionState == ConnectionState.done &&
                             snapshot.data != null) {
+                              file=snapshot.data;
                           return new Image.file(
-                            snapshot.data,
+                            file,
                             width: 70.0,
                             height: 70.0,
                             fit: BoxFit.cover,
                           );
                         } else {
+                          if(file!=null){
+                            return new Image.file(
+                            file,
+                            width: 70.0,
+                            height: 70.0,
+                            fit: BoxFit.cover,
+                          );
+                          }
                           return new Image.asset(
                             "assets/images/lake.jpg",
                             width: 70.0,
