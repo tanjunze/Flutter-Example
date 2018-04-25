@@ -1,8 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:meiju_app/util/global.dart';
+import 'package:meiju_app/component/PickerPhotoDialog.dart';
+import 'dart:async';
+import 'dart:io';
 
 /// 个人中心
-class MePage extends StatelessWidget {
+
+class MePage extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return new _MePageState();
+  }
+}
+
+class _MePageState extends State<MePage> {
+  Future<File> imageFile;
   Widget build(BuildContext context) {
     return new Scaffold(
         appBar: new AppBar(
@@ -11,14 +23,16 @@ class MePage extends StatelessWidget {
         ),
         backgroundColor: pageColor,
         body: new ListView(
-          children: <Widget>[_buildHeaderView(), _buildList(context)],
+          children: <Widget>[_buildHeaderView(context), _buildList(context)],
         ));
   }
 
   Widget _buildList(BuildContext context) {
-    return  new Column(
+    return new Column(
       children: <Widget>[
-        new Divider(color: pageColor,),
+        new Divider(
+          color: pageColor,
+        ),
         _buildRow(context, "历史记录"),
         _LineDivider(),
         _buildRow(context, "我的收藏"),
@@ -73,7 +87,7 @@ class MePage extends StatelessWidget {
         ));
   }
 
-  Widget _buildHeaderView() {
+  Widget _buildHeaderView(BuildContext context) {
     return new Container(
       height: 120.0,
       width: double.infinity,
@@ -82,17 +96,41 @@ class MePage extends StatelessWidget {
         child: new Row(
           children: <Widget>[
             new Padding(
-              padding: const EdgeInsets.all(15.0),
-              child: new ClipRRect(
-                borderRadius: new BorderRadius.circular(99.0),
-                child: new Image.asset(
-                  "assets/images/lake.jpg",
-                  width: 70.0,
-                  height: 70.0,
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ),
+                padding: const EdgeInsets.all(15.0),
+                child: new InkWell(
+                  onTap: () {
+                    showBottomDialog(context, (Future<File> file) {
+                      setState(() {
+                        imageFile = file;
+                      });
+                    });
+                  },
+                  child: new ClipRRect(
+                    borderRadius: new BorderRadius.circular(99.0),
+                    child: new FutureBuilder<File>(
+                      future: imageFile,
+                      builder:
+                          (BuildContext context, AsyncSnapshot<File> snapshot) {
+                        if (snapshot.connectionState == ConnectionState.done &&
+                            snapshot.data != null) {
+                          return new Image.file(
+                            snapshot.data,
+                            width: 70.0,
+                            height: 70.0,
+                            fit: BoxFit.cover,
+                          );
+                        } else {
+                          return new Image.asset(
+                            "assets/images/lake.jpg",
+                            width: 70.0,
+                            height: 70.0,
+                            fit: BoxFit.cover,
+                          );
+                        }
+                      },
+                    ),
+                  ),
+                )),
             new Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[

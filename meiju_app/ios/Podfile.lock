@@ -1,4 +1,6 @@
 PODS:
+  - camera (0.0.1):
+    - Flutter
   - Flutter (1.0.0)
   - path_provider (0.0.1):
     - Flutter
@@ -6,11 +8,14 @@ PODS:
     - Flutter
 
 DEPENDENCIES:
+  - camera (from `Pods/.symlinks/plugins/camera-0.1.2/ios`)
   - Flutter (from `Pods/.symlinks/flutter/ios`)
   - path_provider (from `Pods/.symlinks/plugins/path_provider-0.3.1/ios`)
   - shared_preferences (from `Pods/.symlinks/plugins/shared_preferences-0.3.3/ios`)
 
 EXTERNAL SOURCES:
+  camera:
+    :path: Pods/.symlinks/plugins/camera-0.1.2/ios
   Flutter:
     :path: Pods/.symlinks/flutter/ios
   path_provider:
@@ -19,6 +24,7 @@ EXTERNAL SOURCES:
     :path: Pods/.symlinks/plugins/shared_preferences-0.3.3/ios
 
 SPEC CHECKSUMS:
+  camera: be01db3b2193839f9af56a9db99b7fea444d35f3
   Flutter: 9d0fac939486c9aba2809b7982dfdbb47a7b0296
   path_provider: 09407919825bfe3c2deae39453b7a5b44f467873
   shared_preferences: 5a1d487c427ee18fcd3ea1f2a131569481834b53

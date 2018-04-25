@@ -13,8 +13,10 @@ dependencies:
   json_annotation: ^0.2.2
   # https://pub.dartlang.org/packages/shelf#-installing-tab-
   shelf: "^0.7.2"
-  # https://pub.dartlang.org/packages/http_server#-installing-tab-
-  # http_server: any
+  # 添加相机
+  camera: "^0.1.2"
+  # 图片选择器
+  image_picker: "^0.4.1"
 
 dev_dependencies:
   flutter_test:
