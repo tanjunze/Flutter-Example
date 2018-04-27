@@ -17,6 +17,8 @@ dependencies:
   camera: "^0.1.2"
   # 图片选择器
   image_picker: "^0.4.1"
+  # webview 
+  flutter_webview_plugin: "^0.1.5"
 
 dev_dependencies:
   flutter_test:
