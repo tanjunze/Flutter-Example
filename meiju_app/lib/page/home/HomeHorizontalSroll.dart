@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:meiju_app/models/moive.dart';
 import 'package:meiju_app/component/cache_image.dart';
+import 'package:meiju_app/page/routes/routes.dart';
+import 'package:meiju_app/util/util.dart';
 /// 水平滚动类型
 enum HomeHorizontalScrollType {
   /// 推荐类型
@@ -62,7 +64,7 @@ class HomeHorizontalScroll extends StatelessWidget {
     Moive moive=moiveGroup.moives[index];
     return new InkWell(
       onTap: (){
-          Navigator.pushNamed(context, '/moive_detail');
+          openPage(context, moiveDetailRoute);          
       },
       child: new Padding(
       padding: const EdgeInsets.only(right: 8.0),
