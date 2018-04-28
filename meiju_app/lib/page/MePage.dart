@@ -3,6 +3,8 @@ import 'package:meiju_app/util/global.dart';
 import 'package:meiju_app/component/PickerPhotoDialog.dart';
 import 'dart:async';
 import 'dart:io';
+import 'package:meiju_app/util/util.dart';
+import 'package:meiju_app/page/routes/routes.dart';
 
 /// 个人中心
 
@@ -40,7 +42,9 @@ class _MePageState extends State<MePage> {
         _LineDivider(),
         _buildRow(context, "设置"),
         _LineDivider(),
-        _buildRow(context, "关于我们"),
+        _buildRow(context, "关于我们",onTap: (){
+          openWebView(context, aboutMeUrl);
+        }),
       ],
     );
   }
@@ -53,14 +57,14 @@ class _MePageState extends State<MePage> {
     );
   }
 
-  Widget _buildRow(BuildContext context, String name) {
+  Widget _buildRow(BuildContext context, String name,{GestureTapCallback onTap}) {
     return new Container(
         height: 50.0,
         color: Colors.white,
         child: new Material(
           child: new InkWell(
             onTap: () {
-              //  Navigator.of(context).pushNamed('/b');
+              onTap();
             },
             child: new Row(
               crossAxisAlignment: CrossAxisAlignment.center,
