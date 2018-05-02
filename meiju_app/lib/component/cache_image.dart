@@ -1,31 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/foundation.dart';
 
 /// 缓存image
 class CacheLoadingImage extends StatelessWidget {
-  CacheLoadingImage({this.url, this.height, this.width});
-  double height;
-  double width;
-  String url;
-
+  CacheLoadingImage({
+    @required this.url,
+    this.width,
+    this.height
+  });
+  final String url;
+  final double width;
+  final double height;
+  
   @override
   Widget build(BuildContext context) {
-    return new CachedNetworkImage(
-      fit: BoxFit.cover,
-      height: height,
-      width: width,
-      imageUrl: url,
-      placeholder: _buildSizeChlid(new CircularProgressIndicator()),
-      errorWidget:_buildSizeChlid(new Icon(Icons.error)),
+    return ConstrainedBox(
+      constraints:BoxConstraints.expand(width: width,height: height),
+      child: CachedNetworkImage(
+        fit: BoxFit.cover,
+        imageUrl: url,
+        placeholder: Center(child: new CircularProgressIndicator()),
+        errorWidget: Center(child: new Icon(Icons.error),),
+      ),
     );
-  }
-
-  Widget _buildSizeChlid(Widget childView){
-    return new Container(
-        height: height,
-        width: width,
-        alignment: Alignment.center,
-        child: childView ,
-      );
   }
 }

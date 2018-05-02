@@ -6,13 +6,17 @@ import 'package:flutter/foundation.dart';
 class CacheLoadingImage extends StatelessWidget {
   CacheLoadingImage({
     @required this.url,
+    this.width,
+    this.height
   });
   final String url;
-
+  final double width;
+  final double height;
+  
   @override
   Widget build(BuildContext context) {
     return ConstrainedBox(
-      constraints: const BoxConstraints.expand(),
+      constraints:BoxConstraints.expand(width: width,height: height),
       child: CachedNetworkImage(
         fit: BoxFit.cover,
         imageUrl: url,
