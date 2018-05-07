@@ -17,6 +17,9 @@ class HomePage extends StatelessWidget {
             title: new Text("轮番图小组件"),
           ),
           new ListTile(
+            onTap: () {
+              openPage(context, WheelViewRoute);
+            },
             title: new Text("时间/地区选择器"),
           )
         ],

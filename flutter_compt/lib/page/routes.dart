@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_compt/page/roll_page.dart';
+import 'package:flutter_compt/page/wheel_page.dart';
 
 /// 循环图片
 const LoopViewRoute = "/loopView";
-
+const WheelViewRoute = "/wheelView";
 
 Map<String, Widget> pages = <String, Widget>{
   LoopViewRoute: RollImagePage(),
+  WheelViewRoute:WheelPickerPage(),
 };
 
 Map<String, WidgetBuilder> routes = pages.map((name, page) {
