@@ -3,9 +3,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:meiju_app/page/HomePage.dart';
 import 'package:meiju_app/page/MePage.dart';
 import 'package:meiju_app/component/BottomNavWidget.dart';
-import 'package:meiju_app/component/BottomTabLayout.dart';
-import 'package:meiju_app/page/MoiveDetailPage.dart';
 import 'package:meiju_app/util/global.dart';
+import 'package:meiju_app/component/tab_content_view.dart';
 
 class MainPage extends StatefulWidget {
   @override
@@ -21,21 +20,11 @@ class _MainPage extends State<MainPage> {
   Widget build(BuildContext context) {
     return new Scaffold(
       backgroundColor: pageColor,
-      body: new Stack(
-        children: <Widget>[
-          new Offstage(
-              offstage: index != 0,
-              child: new TickerMode(
-                enabled: index == 0,
-                child: new HomePage(),
-              )),
-          new Offstage(
-            offstage: index != 1,
-            child: new TickerMode(
-              enabled: index == 1,
-              child: new MePage(),
-            ),
-          ),
+      body: TabContentView(
+        currentIndex: index,
+        contents: <Widget>[
+          HomePage(),
+          MePage()
         ],
       ),
       bottomNavigationBar: _buildBottomNavBar(),
