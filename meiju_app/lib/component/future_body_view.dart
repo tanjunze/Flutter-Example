@@ -32,7 +32,7 @@ class FutureBodyView<T> extends StatelessWidget {
           error = snapshot.error;
           return buildErrorView(error);
         }
-        return loadView != null ? loadView : CircularProgressIndicator();
+        return loadView != null ? loadView : Center(child: CircularProgressIndicator(),);
       },
     );
 
