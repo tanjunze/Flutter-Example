@@ -3,12 +3,17 @@ import 'package:shelf/shelf_io.dart';
 import 'dart:async';
 import 'package:flutter/services.dart' show rootBundle;
 import 'dart:io';
+import 'package:meiju_app/httpserver/server_routes.dart';
 
 class SimpleServer {
   static HttpServer _server;
   static const String address = "localhost";
   static const int port = 8080;
-  Map<String, String> jsonHeader() {
+  ServerRoutes routes;
+  SimpleServer() {
+    routes = new ServerRoutes();
+  }
+  static Map<String, String> jsonHeader() {
     return {
       "Content-Type": "application/json",
     };
@@ -35,21 +40,11 @@ class SimpleServer {
     print('Serving at http://${_server.address.host}:${_server.port}');
   }
 
-  Future<Response> asyncHandler(Request request) => router(request);
+  Future<Response> asyncHandler(Request request) => routes.router(request);
 
-  /// http 路由
-  Future<Response> router(Request request) {
-    switch (request.url.path) {
-      case "moives":
-        return loadAssetJson("moives_home.json");
-      default:
-        return new Future(
-            () => new Response.ok("Hi,This is App Server for Data Test!"));
-    }
-  }
-
-  Future<Response> loadAssetJson(String name) async {
-    String jsonStr = await rootBundle.loadString('assets/data/$name');
+  static Future<Response> loadAssetJson(String path) async {
+    //
+    String jsonStr = await rootBundle.loadString(path);
     return new Response.ok(jsonStr, headers: jsonHeader());
   }
 
