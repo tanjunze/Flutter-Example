@@ -9,9 +9,9 @@ class ServerRoutes {
   Future<Response> router(Request request) {
     switch (request.url.path) {
       case "moives":
-      return new Future(
-            () => new Response.notFound("Hi,This is App Server for Data Test!"));
-        // return SimpleServer.loadAssetJson("${path}moives_home.json");
+      // return new Future(
+      //       () => new Response.notFound("Hi,This is App Server for Data Test!"));
+        return SimpleServer.loadAssetJson("${path}moives_home.json");
       default:
         return new Future(
             () => new Response.ok("Hi,This is App Server for Data Test!"));
