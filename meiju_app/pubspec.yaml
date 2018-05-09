@@ -40,9 +40,12 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
+    # 图片
     - assets/images/lake.jpg
     - assets/images/gaosi.png
     - assets/images/arrow-down.png
+    - assets/images/error.png
+    # json 文件
     - assets/data/moives_home.json
     - assets/data/moive_classify.json
     - assets/data/moive_detial.json
