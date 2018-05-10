@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:meiju_app/view/page/home_page.dart';
 import 'package:meiju_app/view/page/me_page.dart';
-import 'package:meiju_app/view/component/bottom_bavigation_bar.dart';
 import 'package:meiju_app/util/global.dart';
 import 'package:meiju_app/view/component/tab_content_view.dart';
 
@@ -14,14 +13,14 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPage extends State<MainPage> {
-  int index = 0;
+  int currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
       backgroundColor: pageColor,
       body: TabContentView(
-        currentIndex: index,
+        currentIndex: currentIndex,
         contents: <Widget>[
           HomePage(),
           MePage()
@@ -34,11 +33,10 @@ class _MainPage extends State<MainPage> {
   Widget _buildBottomNavBar() {
     return new CupertinoTabBar(
       activeColor: Colors.red,
-      currentIndex: BottomNavWidget.currentIndex,
+      currentIndex:currentIndex,
       onTap: (int index) {
         setState(() {
-          this.index = index;
-          BottomNavWidget.currentIndex = index;
+          this.currentIndex = index;
         });
       },
       items: const <BottomNavigationBarItem>[
