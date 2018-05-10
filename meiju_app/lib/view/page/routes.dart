@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:meiju_app/ui/page/Moive_Detail_Page.dart';
-import 'package:meiju_app/ui/page/Moive_Classify_Page.dart';
-import 'package:meiju_app/ui/page/Take_Photo_Page.dart';
-import 'package:meiju_app/ui/page/WebView_Page.dart';
+import 'package:meiju_app/view/page/moive_detail_page.dart';
+import 'package:meiju_app/view/page/moive_classify_page.dart';
+import 'package:meiju_app/view/page/take_photo_page.dart';
+import 'package:meiju_app/view/page/webView_page.dart';
 
 /// 电影详情页面路由
 const moiveDetailRoute = "/moive_detail";

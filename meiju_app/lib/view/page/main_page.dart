@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:meiju_app/ui/page/Home_Page.dart';
-import 'package:meiju_app/ui/page/Me_Page.dart';
+import 'package:meiju_app/view/page/home_page.dart';
+import 'package:meiju_app/view/page/me_page.dart';
 import 'package:meiju_app/view/component/bottom_bavigation_bar.dart';
 import 'package:meiju_app/util/global.dart';
 import 'package:meiju_app/view/component/tab_content_view.dart';
