@@ -20,11 +20,11 @@ class HomePage extends StatefulWidget {
 class _HomePage extends State<HomePage> implements HomeContract {
   HomePresenter _presenter;
   List<MoiveGroup> _datas;
-  LoadStateController loadController;
+  LoadStateController _loadController;
   @override
   void initState() {
     super.initState();
-    loadController = LoadStateController();
+    _loadController = LoadStateController();
     _presenter = new HomePresenter(this);
     _presenter.loadDatas();
   }
@@ -33,14 +33,14 @@ class _HomePage extends State<HomePage> implements HomeContract {
   void onLoadComplete(List<MoiveGroup> items) {
     setState(() {
       _datas = items;
-      loadController.state = LoadState.Success;
+      _loadController.state = LoadState.Success;
     });
   }
 
   @override
   void onLoadError() {
     setState(() {
-      loadController.state = LoadState.Fail;
+      _loadController.state = LoadState.Fail;
     });
   }
 
@@ -53,7 +53,7 @@ class _HomePage extends State<HomePage> implements HomeContract {
       ),
       backgroundColor: pageColor,
       body: LoadStateView(
-        controller: loadController,
+        controller: _loadController,
         child: _buildListView(),
         onRetry: () {
           setState(() {
