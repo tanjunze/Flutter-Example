@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:meiju_app/ui/component/cache_image.dart';
+import 'package:meiju_app/view/component/cache_image.dart';
 
 class Poster extends StatelessWidget {
   static const POSTER_RATIO = 0.70;

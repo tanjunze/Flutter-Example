@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meiju_app/data/bean/moive.dart';
-import 'package:meiju_app/ui/component/cache_image.dart';
-import 'package:meiju_app/ui/page/routes.dart';
+import 'package:meiju_app/view/component/cache_image.dart';
+import 'package:meiju_app/view/page/routes.dart';
 /// 水平滚动类型
 enum HomeHorizontalScrollType {
   /// 推荐类型

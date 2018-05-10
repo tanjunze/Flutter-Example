@@ -22,8 +22,8 @@ class DataRepositoryImpl implements DataRepository {
   }
 
   _requestRecommendData() async {
-    // var url = '$_BASE_URL/moives';
-    var url='http://192.168.24.178:5500/temp.json';
+    var url = '$_BASE_URL/moives';
+    // var url='http://192.168.24.178:5500/temp.json';
     var request = await httpClient.getUrl(Uri.parse(url));
     var response = await request.close();
     if (response.statusCode == HttpStatus.OK) {

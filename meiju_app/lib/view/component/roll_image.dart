@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meiju_app/data/bean/moive.dart';
-import 'package:meiju_app/ui/component/cache_image.dart';
-import 'package:meiju_app/ui/component/loop_view.dart';
+import 'package:meiju_app/view/component/cache_image.dart';
+import 'package:meiju_app/view/component/loop_view.dart';
 import 'package:flutter/foundation.dart';
 
 /// 轮番图

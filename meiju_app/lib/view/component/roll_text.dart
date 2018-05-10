@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meiju_app/data/bean/moive.dart';
-import 'package:meiju_app/ui/component/loop_view.dart';
+import 'package:meiju_app/view/component/loop_view.dart';
 import 'package:flutter/foundation.dart';
 
 /// 滚轮文本

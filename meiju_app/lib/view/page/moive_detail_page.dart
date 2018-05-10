@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:meiju_app/ui/component/detail_banner.dart';
+import 'package:meiju_app/view/component/detail_banner.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:meiju_app/ui/component/Poster.dart';
-import 'package:meiju_app/ui/component/rating_information.dart';
-import 'package:meiju_app/ui/component/random_recommend.dart';
+import 'package:meiju_app/view/component/Poster.dart';
+import 'package:meiju_app/view/component/rating_information.dart';
+import 'package:meiju_app/view/component/random_recommend.dart';
 import 'package:meiju_app/data/bean/moive.dart';
 
 String imageUrl = "http://img.kukan5.com:808/pic/uploadimg/2016-11/19064.jpg";

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:meiju_app/data/bean/moive.dart';
 import 'home/horizontal_sroll_view.dart';
-import 'package:meiju_app/ui/component/roll_image.dart';
-import 'package:meiju_app/ui/component/roll_text.dart';
-import 'package:meiju_app/ui/page/home/recent_updates_list.dart';
+import 'package:meiju_app/view/component/roll_image.dart';
+import 'package:meiju_app/view/component/roll_text.dart';
+import 'package:meiju_app/view/page/home/recent_updates_list.dart';
 import 'package:meiju_app/util/global.dart';
-import 'package:meiju_app/ui/page/routes.dart';
-import 'package:meiju_app/ui/page/home/home_presenter.dart';
-import 'package:meiju_app/ui/component/load_state_view.dart';
+import 'package:meiju_app/view/page/routes.dart';
+import 'package:meiju_app/presenter/home_presenter.dart';
+import 'package:meiju_app/view/component/load_state_view.dart';
 
 // 首页
 class HomePage extends StatefulWidget {

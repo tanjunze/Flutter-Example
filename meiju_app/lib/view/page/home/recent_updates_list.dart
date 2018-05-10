@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:meiju_app/ui/component/cache_image.dart';
+import 'package:meiju_app/view/component/cache_image.dart';
 import 'package:meiju_app/data/bean/moive.dart';
 
 /// 显示底部 最近更新
