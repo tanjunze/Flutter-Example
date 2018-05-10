@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:meiju_app/component/cache_image.dart';
+import 'package:meiju_app/ui/component/cache_image.dart';
 import 'dart:ui' show ImageFilter;
 
 class ArcBannerImage extends StatelessWidget {

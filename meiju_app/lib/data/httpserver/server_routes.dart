@@ -1,6 +1,6 @@
 import 'package:shelf/shelf.dart';
 import 'dart:async';
-import 'package:meiju_app/httpserver/simple_server.dart';
+import 'package:meiju_app/data/httpserver/simple_server.dart';
 
 class ServerRoutes {
   static String path = 'assets/data/';

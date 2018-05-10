@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:meiju_app/models/moive.dart';
-import 'package:meiju_app/component/cache_image.dart';
+import 'package:meiju_app/data/bean/moive.dart';
+import 'package:meiju_app/ui/component/cache_image.dart';
 
 class RandomRecommend extends StatelessWidget {
   RandomRecommend({this.moives});

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:meiju_app/page/MainPage.dart';
-import 'package:meiju_app/page/routes/routes.dart';
-import 'package:meiju_app/httpserver/simple_server.dart';
-
+import 'package:meiju_app/ui/page/main_page.dart';
+import 'package:meiju_app/data/httpserver/simple_server.dart';
+import 'package:meiju_app/ui/page/routes.dart';
 void main()  {
   runHttpServer();
   runApp(new MyApp());

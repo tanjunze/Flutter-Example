@@ -3,7 +3,7 @@ import 'package:shelf/shelf_io.dart';
 import 'dart:async';
 import 'package:flutter/services.dart' show rootBundle;
 import 'dart:io';
-import 'package:meiju_app/httpserver/server_routes.dart';
+import 'package:meiju_app/data/httpserver/server_routes.dart';
 
 class SimpleServer {
   static HttpServer _server;

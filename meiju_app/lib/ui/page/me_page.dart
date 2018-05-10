@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:meiju_app/util/global.dart';
-import 'package:meiju_app/component/PickerPhotoDialog.dart';
+import 'package:meiju_app/ui/component/PickerPhotoDialog.dart';
 import 'dart:async';
 import 'dart:io';
 import 'package:meiju_app/util/util.dart';
-import 'package:meiju_app/page/routes/routes.dart';
+import 'package:meiju_app/ui/page/routes.dart';
 
 /// 个人中心
 

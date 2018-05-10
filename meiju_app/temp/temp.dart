@@ -75,3 +75,23 @@
 //             },
 //           ),
 //         )
+
+
+
+// FutureBodyView<List<MoiveGroup>>(
+//         bodyBuilder: (datas) {
+//           groups = datas;
+//           return ListView.builder(
+//             itemCount: datas.length,
+//             itemBuilder: (context, index) {
+//               return _buildGroup(context, index);
+//             },
+//           );
+//         },
+//         future: datasSource,
+//         onRetry: () {
+//           setState(() {
+//             datasSource = DataManager().dataRepository.getRecommendMoive();
+//           });
+//         },
+//       )

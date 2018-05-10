@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meiju_app/util/global.dart';
-import 'package:meiju_app/component/expand_view.dart';
-import 'package:meiju_app/component/mult_select_tabs.dart';
+import 'package:meiju_app/ui/component/expand_view.dart';
+import 'package:meiju_app/ui/component/mult_select_tabs.dart';
 import 'classify/classify_drawer.dart';
 
 /// 电影分类页面

@@ -1,14 +1,12 @@
 import 'dart:convert';
 import 'dart:io';
 import 'dart:async';
-import 'package:meiju_app/models/moive.dart';
-import 'meiju_api.dart';
-import 'package:meiju_app/models/moive.dart';
-import 'package:utf/utf.dart';
+import 'package:meiju_app/data/bean/moive.dart';
 import 'package:http/http.dart' as http;
-import 'package:meiju_app/httpserver/simple_server.dart';
+import 'package:meiju_app/data/httpserver/simple_server.dart';
+import 'package:meiju_app/data/source/data_repository.dart';
 
-class MeijuApiImpl implements MeijuApi {
+class DataRepositoryImpl implements DataRepository {
   static var httpClient = new HttpClient();
   static const _BASE_URL =
       "http://${SimpleServer.address}:${SimpleServer.port}";
@@ -16,15 +14,16 @@ class MeijuApiImpl implements MeijuApi {
 
   @override
   Future<List<MoiveGroup>> getRecommendMoive({bool refresh}) async {
-    if (refresh || moiveGroup.isEmpty) {
+    // if (refresh || moiveGroup.isEmpty) {
       print("moiveGroup.isEmpty");
       await _requestRecommendData();
-    }
+    // }
     return moiveGroup;
   }
 
   _requestRecommendData() async {
-    var url = '$_BASE_URL/moives';
+    // var url = '$_BASE_URL/moives';
+    var url='http://192.168.24.178:5500/temp.json';
     var request = await httpClient.getUrl(Uri.parse(url));
     var response = await request.close();
     if (response.statusCode == HttpStatus.OK) {
@@ -44,6 +43,3 @@ requestData() async {
   return new HomeBean.fromJson(responseJson).items;
 }
 
-// try {
-
-// } catch (exception) {}
