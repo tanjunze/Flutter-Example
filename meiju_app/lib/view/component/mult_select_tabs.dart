@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:meiju_app/ui/component/expand_view.dart';
+import 'package:meiju_app/view/component/expand_view.dart';
 import 'package:flutter/gestures.dart';
 
 typedef void OnTabTap(int index, bool isActive);
