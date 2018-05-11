@@ -1,12 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:meiju_app/util/global.dart';
-import 'package:meiju_app/view/component/PickerPhotoDialog.dart';
-import 'dart:async';
-import 'dart:io';
-import 'package:meiju_app/util/util.dart';
-import 'package:meiju_app/view/page/routes.dart';
-import 'package:meiju_app/view/theme.dart';
-import 'package:meiju_app/view/dialog_manager.dart';
+
+import 'package:meiju_app/app_path.dart';
 
 /// 个人中心
 
