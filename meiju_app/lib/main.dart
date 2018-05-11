@@ -2,18 +2,34 @@ import 'package:flutter/material.dart';
 import 'package:meiju_app/view/page/main_page.dart';
 import 'package:meiju_app/data/httpserver/simple_server.dart';
 import 'package:meiju_app/view/page/routes.dart';
-void main()  {
+import 'package:meiju_app/view/theme.dart';
+
+void main() {
   runHttpServer();
   runApp(new MyApp());
 }
-class MyApp extends StatelessWidget {
+
+class MyApp extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return _MyAppState();
+  }
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
+  void initState() {
+    super.initState();
+    AppTheme.changeLisenter((theme) {
+      setState(() => AppTheme.currentTheme = theme);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
       title: '美剧APP',
-      theme: new ThemeData(
-        primarySwatch: Colors.red,
-      ),
+      theme: AppTheme.currentTheme,
       routes: routes,
       home: new MainPage(),
     );
@@ -21,12 +37,8 @@ class MyApp extends StatelessWidget {
 }
 
 /// 开启 Http 服务
-runHttpServer(){
-  SimpleServer server=new SimpleServer();
+runHttpServer() {
+  SimpleServer server = new SimpleServer();
   server.closeServer();
   server.startServer();
 }
-
-
-
-

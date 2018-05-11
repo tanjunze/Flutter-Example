@@ -5,6 +5,8 @@ import 'dart:async';
 import 'dart:io';
 import 'package:meiju_app/util/util.dart';
 import 'package:meiju_app/view/page/routes.dart';
+import 'package:meiju_app/view/theme.dart';
+import 'package:meiju_app/view/dialog_manager.dart';
 
 /// 个人中心
 
@@ -40,9 +42,17 @@ class _MePageState extends State<MePage> {
         _LineDivider(),
         _buildRow(context, "我的收藏"),
         _LineDivider(),
-        _buildRow(context, "设置"),
+        _buildRow(
+          context,
+          "设置",
+        ),
         _LineDivider(),
-        _buildRow(context, "关于我们",onTap: (){
+        _buildRow(context, "切换主题", onTap: () {
+            AppTheme.setTheme(AppTheme.currentTheme == redTheme ? blueTheme : redTheme);
+            
+        }),
+        _LineDivider(),
+        _buildRow(context, "关于我们", onTap: () {
           openWebView(context, aboutMeUrl);
         }),
       ],
@@ -57,7 +67,8 @@ class _MePageState extends State<MePage> {
     );
   }
 
-  Widget _buildRow(BuildContext context, String name,{GestureTapCallback onTap}) {
+  Widget _buildRow(BuildContext context, String name,
+      {GestureTapCallback onTap}) {
     return new Container(
         height: 50.0,
         color: Colors.white,
@@ -118,7 +129,7 @@ class _MePageState extends State<MePage> {
                           (BuildContext context, AsyncSnapshot<File> snapshot) {
                         if (snapshot.connectionState == ConnectionState.done &&
                             snapshot.data != null) {
-                              file=snapshot.data;
+                          file = snapshot.data;
                           return new Image.file(
                             file,
                             width: 70.0,
@@ -126,13 +137,13 @@ class _MePageState extends State<MePage> {
                             fit: BoxFit.cover,
                           );
                         } else {
-                          if(file!=null){
+                          if (file != null) {
                             return new Image.file(
-                            file,
-                            width: 70.0,
-                            height: 70.0,
-                            fit: BoxFit.cover,
-                          );
+                              file,
+                              width: 70.0,
+                              height: 70.0,
+                              fit: BoxFit.cover,
+                            );
                           }
                           return new Image.asset(
                             "assets/images/lake.jpg",

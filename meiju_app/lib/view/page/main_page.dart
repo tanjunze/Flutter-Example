@@ -32,7 +32,7 @@ class _MainPage extends State<MainPage> {
 
   Widget _buildBottomNavBar() {
     return new CupertinoTabBar(
-      activeColor: Colors.red,
+      activeColor:Theme.of(context).primaryColor,
       currentIndex:currentIndex,
       onTap: (int index) {
         setState(() {

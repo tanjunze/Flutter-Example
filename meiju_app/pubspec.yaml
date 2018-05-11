@@ -19,6 +19,8 @@ dependencies:
   image_picker: "^0.4.1"
   # webview 
   flutter_webview_plugin: "^0.1.5"
+  # 颜色选着器
+  flutter_colorpicker: any
   
 
 dev_dependencies:
