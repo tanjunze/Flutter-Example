@@ -68,7 +68,9 @@ class _MePageState extends State<MePage> {
         child: new Material(
           child: new InkWell(
             onTap: () {
-              onTap();
+              if(onTap!=null){
+                onTap();
+              };
             },
             child: new Row(
               crossAxisAlignment: CrossAxisAlignment.center,
