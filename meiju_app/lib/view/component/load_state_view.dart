@@ -40,9 +40,9 @@ class LoadStateView<T> extends StatelessWidget {
   }
 
   Widget _buildErrorView(Object errorMsg) {
-    return new GestureDetector(
+    return GestureDetector(
       onTap: () {
-              controller.state=LoadState.Loading;
+        controller.state = LoadState.Loading;
         onRetry();
       },
       child: errorView != null ? errorView : _buildDefaultErrorView(errorMsg),
@@ -58,28 +58,33 @@ class LoadStateView<T> extends StatelessWidget {
   }
 
   Widget _buildDefaultErrorView(Object errorMsg) {
+    var errorsView = <Widget>[
+      Image.asset(
+        "assets/images/error.png",
+        width: 230.0,
+        height: 230.0,
+        fit: BoxFit.cover,
+      ),
+      Text("点击重试！")
+    ];
+    if (errorMsg != null) {
+      errorsView.insert(
+        1,
+        Padding(
+          padding: const EdgeInsets.only(top: 10.0, bottom: 10.0),
+          child: Text(
+            "${errorMsg.toString()}",
+            style: TextStyle(fontSize: 10.0, color: Colors.grey.shade800),
+          ),
+        ),
+      );
+    }
     return Center(
-      child: new Column(
+      child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
-        children: <Widget>[
-          Image.asset(
-            "assets/images/error.png",
-            width: 100.0,
-            height: 100.0,
-            fit: BoxFit.cover,
-          ),
-          errorMsg ??
-              new Padding(
-                padding: const EdgeInsets.only(top: 10.0, bottom: 10.0),
-                child: new Text(
-                  "${errorMsg.toString()}",
-                  style: TextStyle(fontSize: 10.0, color: Colors.grey.shade800),
-                ),
-              ),
-          new Text("点击重试！")
-        ],
+        children: errorsView,
       ),
     );
   }
