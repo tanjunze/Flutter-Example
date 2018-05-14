@@ -15,11 +15,11 @@ class PickerPhotoDialog extends StatelessWidget {
   PickerImageLisenter pickerLisenter;
   @override
   Widget build(BuildContext context) {
-    pickerHelper = new ImagePickerHelper(maxHeight: 160.0,maxWidth: 160.0);
-    return new SafeArea(
-      child: new Padding(
+    pickerHelper =  ImagePickerHelper(maxHeight: 160.0,maxWidth: 160.0);
+    return  SafeArea(
+      child:  Padding(
         padding: const EdgeInsets.all(10.0),
-        child: new Column(
+        child:  Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             _buildItem(context, itemTakePhoto),
@@ -32,7 +32,7 @@ class PickerPhotoDialog extends StatelessWidget {
   }
 
   Widget _buildItem(BuildContext context, String text) {
-    return new InkWell(
+    return  InkWell(
       onTap: () {
         if (text == itemAlbum) {
           pickerHelper.pickerImage();
@@ -47,27 +47,27 @@ class PickerPhotoDialog extends StatelessWidget {
         }
         Navigator.pop(context);
       },
-      child: new Container(
+      child:  Container(
         margin: const EdgeInsets.all(5.0),
-        decoration: new BoxDecoration(
-            color: Colors.red, borderRadius: new BorderRadius.circular(5.0)),
+        decoration:  BoxDecoration(
+            color: Theme.of(context).primaryColor, borderRadius:  BorderRadius.circular(5.0)),
         width: double.infinity,
         padding: const EdgeInsets.only(
             left: 15.0, right: 15.0, top: 10.0, bottom: 10.0),
-        child: new Center(
-          child: new Text(text,
+        child:  Center(
+          child:  Text(text,
               textAlign: TextAlign.start,
-              style: new TextStyle(color: Colors.white, fontSize: 16.0)),
+              style:  TextStyle(color: Colors.white, fontSize: 16.0)),
         ),
       ),
     );
   }
 }
 
-showBottomDialog(BuildContext context,PickerImageLisenter pickerLisenter) {
+showPickerPhotoDialog(BuildContext context,PickerImageLisenter pickerLisenter) {
   showModalBottomSheet(
       context: context,
       builder: (context) {
-        return new PickerPhotoDialog(pickerLisenter);
+        return  PickerPhotoDialog(pickerLisenter);
       });
 }

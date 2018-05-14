@@ -1,4 +1,3 @@
-
 import 'package:meiju_app/app_path.dart';
 
 /// 个人中心
@@ -6,45 +5,44 @@ import 'package:meiju_app/app_path.dart';
 class MePage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return new _MePageState();
+    return _MePageState();
   }
 }
 
 class _MePageState extends State<MePage> {
   Future<File> imageFile;
-  File file;
   Widget build(BuildContext context) {
-    return new Scaffold(
-        appBar: new AppBar(
+    return Scaffold(
+        appBar: AppBar(
           centerTitle: true,
-          title: new Text("个人中心"),
+          title: Text("个人中心"),
         ),
         backgroundColor: pageColor,
-        body: new ListView(
+        body: ListView(
           children: <Widget>[_buildHeaderView(context), _buildList(context)],
         ));
   }
 
   Widget _buildList(BuildContext context) {
-    return new Column(
+    return Column(
       children: <Widget>[
-        new Divider(
+        Divider(
           color: pageColor,
         ),
         _buildRow(context, "历史记录"),
-        _LineDivider(),
+        _lineDivider(),
         _buildRow(context, "我的收藏"),
-        _LineDivider(),
+        _lineDivider(),
         _buildRow(
           context,
           "设置",
         ),
-        _LineDivider(),
+        _lineDivider(),
         _buildRow(context, "切换主题", onTap: () {
-            AppTheme.setTheme(AppTheme.currentTheme == redTheme ? blueTheme : redTheme);
-            
+          AppTheme.setTheme(
+              AppTheme.currentTheme == redTheme ? blueTheme : redTheme);
         }),
-        _LineDivider(),
+        _lineDivider(),
         _buildRow(context, "关于我们", onTap: () {
           openWebView(context, aboutMeUrl);
         }),
@@ -52,8 +50,8 @@ class _MePageState extends State<MePage> {
     );
   }
 
-  Widget _LineDivider() {
-    return new Divider(
+  Widget _lineDivider() {
+    return Divider(
       height: 1.0,
       indent: 40.0,
       color: Colors.grey.withAlpha(70),
@@ -62,32 +60,32 @@ class _MePageState extends State<MePage> {
 
   Widget _buildRow(BuildContext context, String name,
       {GestureTapCallback onTap}) {
-    return new Container(
+    return Container(
         height: 50.0,
         color: Colors.white,
-        child: new Material(
-          child: new InkWell(
+        child: Material(
+          child: InkWell(
             onTap: () {
-              if(onTap!=null){
+              if (onTap != null) {
                 onTap();
-              };
+              }
             },
-            child: new Row(
+            child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                new Padding(
+                Padding(
                   padding: const EdgeInsets.only(right: 10.0, left: 10.0),
-                  child: new Icon(
+                  child: Icon(
                     Icons.settings,
-                    color: Colors.red.withAlpha(100),
+                    color: Theme.of(context).primaryColor.withAlpha(100),
                   ),
                 ),
-                new Expanded(
-                  child: new Text(name),
+                Expanded(
+                  child: Text(name),
                 ),
-                new Padding(
+                Padding(
                   padding: const EdgeInsets.only(right: 10.0),
-                  child: new Icon(
+                  child: Icon(
                     Icons.keyboard_arrow_right,
                     color: Colors.black.withAlpha(100),
                   ),
@@ -99,48 +97,37 @@ class _MePageState extends State<MePage> {
   }
 
   Widget _buildHeaderView(BuildContext context) {
-    return new Container(
+    return SizedBox(
       height: 120.0,
       width: double.infinity,
-      color: Colors.red,
-      child: new Material(
-        child: new Row(
+      child: Material(
+        child: Row(
           children: <Widget>[
-            new Padding(
+            Padding(
                 padding: const EdgeInsets.all(15.0),
-                child: new InkWell(
+                child: GestureDetector(
                   onTap: () {
-                    showBottomDialog(context, (Future<File> file) {
+                    showPickerPhotoDialog(context, (Future<File> file) {
                       setState(() {
                         imageFile = file;
                       });
                     });
                   },
-                  child: new ClipRRect(
-                    borderRadius: new BorderRadius.circular(99.0),
-                    child: new FutureBuilder<File>(
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(99.0),
+                    child: FutureBuilder<File>(
                       future: imageFile,
                       builder:
                           (BuildContext context, AsyncSnapshot<File> snapshot) {
-                        if (snapshot.connectionState == ConnectionState.done &&
-                            snapshot.data != null) {
-                          file = snapshot.data;
-                          return new Image.file(
-                            file,
+                        if (snapshot.data != null) {
+                          return Image.file(
+                            snapshot.data,
                             width: 70.0,
                             height: 70.0,
                             fit: BoxFit.cover,
                           );
                         } else {
-                          if (file != null) {
-                            return new Image.file(
-                              file,
-                              width: 70.0,
-                              height: 70.0,
-                              fit: BoxFit.cover,
-                            );
-                          }
-                          return new Image.asset(
+                          return Image.asset(
                             "assets/images/lake.jpg",
                             width: 70.0,
                             height: 70.0,
@@ -151,19 +138,19 @@ class _MePageState extends State<MePage> {
                     ),
                   ),
                 )),
-            new Column(
+            Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                new Text(
+                Text(
                   "tanjz",
-                  style: new TextStyle(
-                      color: const Color(0xFF333333), fontSize: 17.0),
+                  style:
+                      TextStyle(color: const Color(0xFF333333), fontSize: 17.0),
                 ),
-                new Padding(
+                Padding(
                   padding: const EdgeInsets.only(top: 10.0),
-                  child: new Text(
+                  child: Text(
                     "微信登录",
-                    style: new TextStyle(
+                    style: TextStyle(
                         color: const Color(0xFF666666), fontSize: 13.0),
                   ),
                 )
